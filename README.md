@@ -1,4 +1,4 @@
-Synthesis Epitech Project, SYN_palindrome_2019 [![codecov](https://github.com/Thyvene/SYN_palindrome_2019/workflows/.github/workflows/palindrome_ci.yml/badge.svg)
+Synthesis Epitech Project, ![Palindrome CI](https://github.com/Thyvene/SYN_palindrome_2019/workflows/Palindrome%20CI/badge.svg)
 
 A palindrome is a word or a number which reads the same backward or forward (that is for numbers, numbers invariant when reversed).
 A n-iteration turnover palindrome is a number which leads to a palindrome after n iterations of the following
