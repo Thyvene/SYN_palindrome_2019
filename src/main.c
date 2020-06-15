@@ -7,7 +7,7 @@
 
 #include "palindrome.h"
 
-/*int main(int ac, char **av)
+int main(int ac, char **av)
 {
     if (ac != 3)
     {
@@ -18,4 +18,4 @@
         printf("factorial of %d is %d\n", atoi(av[2]),
             my_factrec_synthesis(atoi(av[2])));
     }
-}*/
+}
