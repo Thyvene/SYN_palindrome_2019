@@ -12,6 +12,7 @@
 
 /*--Requirements--*/
 int my_factrec_synthesis(int nb);
+int my_squareroot_synthesis(int nb);
 /*--Requirements--*/
 
 #endif /* !PALINDROME_H_ */

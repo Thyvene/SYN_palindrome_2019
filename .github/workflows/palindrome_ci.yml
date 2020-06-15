@@ -23,3 +23,11 @@ jobs:
       run: ./palindrome f
     - name: Test_first_function_4
       run: ./palindrome f 13
+    - name: Test_second_function
+      run: ./palindrome s 1
+    - name: Test_second_function_2
+      run: ./palindrome s 5
+    - name: Test_second_function_3
+      run: ./palindrome s
+    - name: Test_second_function_4
+      run: ./palindrome s 14
