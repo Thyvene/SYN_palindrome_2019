@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: Palindrome CI
 
 on:
   push:
@@ -13,6 +13,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: codecov/codecov-action@v1
+        with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        name: Palindrome_coverage
+        fail_ci_if_error: true
     - name: make
       run: make
     - name: Test_first_function
