@@ -17,8 +17,9 @@ jobs:
       run: make
     - name: Test_first_function
       run: palindrome f 1
-      run: palindrome f 2
+    - name: Test_first_function_2
       run: palindrome f 5
-      run: palindrome f 10
-      run: palindrome f 13
+    - name: Test_first_function_3
       run: palindrome f
+    - name: Test_first_function_4
+      run: palindrome f 13
