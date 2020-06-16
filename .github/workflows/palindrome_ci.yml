@@ -15,19 +15,18 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
-    - name: Test_first_function
-      run: ./palindrome f 1
-    - name: Test_first_function_2
-      run: ./palindrome f 5
-    - name: Test_first_function_3
-      run: ./palindrome f
-    - name: Test_first_function_4
-      run: ./palindrome f 13
-    - name: Test_second_function
-      run: ./palindrome s 1
-    - name: Test_second_function_2
-      run: ./palindrome s 5
-    - name: Test_second_function_3
-      run: ./palindrome s
-    - name: Test_second_function_4
-      run: ./palindrome s 14
+    - name: Test Palindrome with a base of 10
+      run: ./palindrome -n 4782 -b 10
+    - name: Test Palindrome with a base of 2
+      run: ./palindrome -n 64 -b 2
+    - name: Test palindrome with -p option
+      run: ./palindrome -p 363 -b 10
+    - name: Test Palindrome with -imax option
+      run: ./palindrome -p 363 -b 10 -imax 2
+    - name: Test Palindrome with -imin option
+      run: ./palindrome -p 363 -b 10 -imin 6
+    - name: Test Palindrome with bad arguments
+      run: ./palindrome -n 4782 toto
+      continue-on-error: true
+    - name: Test Palindrome but with a result of "no solution"
+      run: ./palindrome -p 363 -b 10 -imin 7

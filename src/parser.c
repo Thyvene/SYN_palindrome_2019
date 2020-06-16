@@ -11,19 +11,19 @@ static int parse_flag(int nb_flag, value_t *value, char *arg)
 {
     switch (nb_flag) {
         case 0:
-            info->nb = my_atoi(arg);
+            value->nb = my_atoi(arg);
             break;
         case 1:
-            info->pal = my_atoi(arg);
+            value->pal = my_atoi(arg);
             break;
         case 2:
-            info->base = my_atoi(arg);
+            value->base = my_atoi(arg);
             break;
         case 3:
-            info->imin = my_atoi(arg);
+            value->imin = my_atoi(arg);
             break;
         case 4:
-            info->imax = my_atoi(arg);
+            value->imax = my_atoi(arg);
             break;
         default:
             return (84);
@@ -41,8 +41,7 @@ static void bringflag(char **av, value_t *value, int *i)
             *i += 1;
             return;
         }
-    write(2, "Error: bad option\n\0", 20);
-    exit(84);
+    my_exit(2, "Error: bad option\n\0", 84);
 }
 
 value_t return_option(int ac, char **av)
@@ -50,16 +49,13 @@ value_t return_option(int ac, char **av)
     value_t value = {-1, -1, 10, 0, 100};
 
     if ((ac % 2) == 0 || ac == 1)
-        write(2, "Error: bad number of option\n\0", 30);
-        exit(84);
-    for (int i = 1; i < ac; i++) {
+        my_exit(2, "Error: bad number of option\n\0", 84);
+    for (int i = 1; i < ac; i++)
         bringflag(av, &value, &i);
-    }
     if ((value.nb == -1 && value.pal == -1) ||
         (value.nb != -1 && value.pal != -1) || value.base < 2 ||
         value.base > 10 || value.imin < 0 || value.imax < 0 ||
         value.imin > value.imax)
-        write(2, "Error: bad option\n\0", 20);
-        exit(84);
+        my_exit(2, "Error: bad option\n\0", 84);
     return (value);
 }

@@ -25,6 +25,18 @@ int my_squareroot_synthesis(int nb);
 
 /*--Parser--*/
 value_t return_option(int ac, char **av);
+/*--Parser end--*/
 
+/*--Tools functions--*/
+void my_exit(int fd, char *str, int res);
+int power(int nb, int pow);
+int transform_arg(char *str, int base);
+char *transform_base(unsigned int nb, int base, int maj);
+/*--Tools functions end--*/
+
+/*--Palindrome functions--*/
+void iteration(int nb, value_t value);
+void palindrome(value_t value);
+/*--Palindrome functions endd-*/
 
 #endif /* !PALINDROME_H_ */

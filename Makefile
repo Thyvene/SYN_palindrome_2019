@@ -42,7 +42,9 @@ INCL_PATH	=	$(ROOT_PATH)$(INCL_NAME)
 TESTS_PATH	=	$(ROOT_PATH)$(TESTS_NAME)
 SRC_PATH	=	$(ROOT_PATH)$(SRC_NAME)
 
-SRC	=	../requirement.c \
+SRC	=	tools.c \
+		parser.c \
+		palindrome.c \
 
 SRC_LIB	=	my string stdio
 
