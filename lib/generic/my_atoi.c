@@ -6,13 +6,23 @@
 ** as an argument and returns its value of type int
 */
 
+#include "my.h"
+#include <ctype.h>
+
 int my_atoi(char *str)
 {
-    int res = 0;
+    int nb = 0;
 
-    for (int i = 0; str[i] != '\0'; i++) {
-        res = res + str[i] - '\0';
+    if (str == NULL || str[0] == '\0') {
+        write(2, "Error: void string\n\0", 21);
+        exit(84);
     }
-
-    return (res);
+    for (size_t i = 0; str[i] != '\0'; i++) {
+        if (isdigit(str[i]) == 0) {
+            write(2, "Error: bad option\n\0", 20);
+            exit(84);
+        }
+        nb = (nb * 10) + (str[i] - '0');
+    }
+    return (nb);
 }
