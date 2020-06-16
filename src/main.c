@@ -15,11 +15,11 @@ int main(int ac, char **av)
         return (0);
     }
     if (av[1][0] == 'f') {
-        printf("factorial of %d is %d\n", atoi(av[2]),
-            my_factrec_synthesis(atoi(av[2])));
+        printf("factorial of %d is %d\n", my_atoi(av[2]),
+            my_factrec_synthesis(my_atoi(av[2])));
     }
     if (av[1][0] == 's') {
-        printf("square root of %d is %d\n", atoi(av[2]),
-            my_squareroot_synthesis(atoi(av[2])));
+        printf("square root of %d is %d\n", my_atoi(av[2]),
+            my_squareroot_synthesis(my_atoi(av[2])));
     }
 }

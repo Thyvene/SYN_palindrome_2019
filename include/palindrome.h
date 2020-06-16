@@ -10,9 +10,21 @@
 
 #include "my.h"
 
-/*--Requirements--*/
+typedef struct value_s {
+    int nb;
+    int pal;
+    int base;
+    int imin;
+    int imax;
+} value_t;
+
+/*--Requirements functions--*/
 int my_factrec_synthesis(int nb);
 int my_squareroot_synthesis(int nb);
-/*--Requirements--*/
+/*--Requirements functions end--*/
+
+/*--Parser--*/
+value_t return_option(int ac, char **av);
+
 
 #endif /* !PALINDROME_H_ */
