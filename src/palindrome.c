@@ -60,7 +60,7 @@ static int palindrome_iteration(int nb, value_t value)
         str = transform_base(nb, value.base, 0);
         str_two = my_revstr(my_strdup(str));
     }
-    if (i >= value.imin && strcmp(str, palin_str) == 0) {
+    if (i >= value.imin && my_strcmp(str, palin_str) == 0) {
         check = 1;
         print_result(value.nb, nb, i, value.base);
     }
