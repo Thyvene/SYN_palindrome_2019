@@ -17,4 +17,3 @@ char *my_strcat(char *dest, char const *src)
     dest[a + b] = '\0';
     return (dest);
 }
-

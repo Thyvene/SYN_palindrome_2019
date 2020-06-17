@@ -26,4 +26,3 @@ int my_find_prime_sup(int nb)
         if (is_my_prime(a) == 1)
             return (1);
 }
-

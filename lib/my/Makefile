@@ -57,11 +57,8 @@ SRC_PRINTF	=	flag_bin.c \
 			check_flags.c \
 			my_printf.c \
 
-SRC_GNL		=	get_next_line.c \
-
 SRCS	=	$(SRC_MY:%=$(MY_PATH)/%)
 SRCS	+=	$(SRC_PRINTF:%=$(PRINTF_PATH)/%)
-SRCS	+= 	$(SRC_GNL:%=$(GNL_PATH)/%)
 
 OBJ	=	$(SRCS:.c=.o)
 

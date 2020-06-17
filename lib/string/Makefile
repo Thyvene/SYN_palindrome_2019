@@ -37,7 +37,7 @@ SRC	=	my_str_isalpha.c	my_str_islower.c	my_str_isnum.c	\
 		my_str_isprintable.c	my_str_isupper.c 	my_strcat.c	\
 		my_strcmp.c 	my_memorycpy.c 	my_strchr.c \
 		my_strcpy.c 	my_strlen.c		my_strlowcase.c	\
-		my_strncat.c	my_strncmp.c 	my_strncpy.c \
+		my_strncat.c	my_strncpy.c \
 		my_strstr.c 	my_strdup.c 	my_memset.c \
 		my_strupcase.c 	my_strdel.c 	my_strsub.c \
 		my_putendline.c my_zerb.c 		my_strrealloc.c \

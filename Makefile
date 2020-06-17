@@ -42,7 +42,8 @@ INCL_PATH	=	$(ROOT_PATH)$(INCL_NAME)
 TESTS_PATH	=	$(ROOT_PATH)$(TESTS_NAME)
 SRC_PATH	=	$(ROOT_PATH)$(SRC_NAME)
 
-SRC	=	tools.c \
+SRC	=	../requirement.c \
+		tools.c \
 		parser.c \
 		palindrome.c \
 
