@@ -53,7 +53,9 @@ SRC_TESTS	=	$(SRC_LIB)test_my_getnbr.c \
 				$(SRC_LIB)test_my_strncpy.c \
 				$(SRC_LIB)test_my_strstr.c \
 				$(SRC_LIB)test_my_strupcase.c \
-				$(SRC_LIB)test_my_swap.c
+				$(SRC_LIB)test_my_swap.c \
+				basic_tests.c \
+				basic_bad_args.c \
 
 SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_TESTS)
 OBJ	=	$(SRCS:.c=.test_o)
