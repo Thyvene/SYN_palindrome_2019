@@ -15,6 +15,12 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       run: make
+    - name: Test requirement with factorial option
+      run: ./requirement f 3
+    - name: Test requirement with square option
+      run: ./requirement s 9
+    - name: Test requirement with missing option
+      run: ./requirement f
     - name: Test Palindrome with a base of 10
       run: ./palindrome -n 4782 -b 10
     - name: Test Palindrome with a base of 2
