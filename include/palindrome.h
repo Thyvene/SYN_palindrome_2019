@@ -29,7 +29,6 @@ value_t return_option(int ac, char **av);
 
 /*--Tools functions--*/
 void my_exit(int fd, char *str, int res);
-int power(int nb, int pow);
 int transform_arg(char *str, int base);
 char *transform_base(unsigned int nb, int base, int maj);
 /*--Tools functions end--*/

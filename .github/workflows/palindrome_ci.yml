@@ -36,3 +36,11 @@ jobs:
       continue-on-error: true
     - name: Test Palindrome but with a result of "no solution"
       run: ./palindrome -p 363 -b 10 -imin 7
+    - name: Test Palindrome with -n option but no solution found
+      run: ./palindrome -n 9 -b 10 -imin 9
+    - name: Test Palindrome with -n option but capital letters
+      run: ./palindrome -N 363 -B 10 -IMIN 6
+      continue-on-error: true
+    - name: Test Palindrome with -n option but capital and lower letters
+      run: ./palindrome -N 363 -b 10 -IMIN 6
+      continue-on-error: true
