@@ -13,17 +13,6 @@ void my_exit(int fd, char *str, int res)
     exit(res);
 }
 
-int power(int nb, int pow)
-{
-    int res = nb;
-
-    if (pow == 0)
-        return (1);
-    for (int i = 0; i < (pow - 1); i++)
-        res *= nb;
-    return (res);
-}
-
 int transform_arg(char *str, int base)
 {
     int res = 0;
