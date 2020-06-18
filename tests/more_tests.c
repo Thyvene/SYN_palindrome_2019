@@ -20,7 +20,7 @@ Test(Basic_test, No_solution_found_palin, .init = redirect_all_stdout)
     value_t value = {-1, 363, 10, 7, 100};
 
     palindrome(value);
-    cr_assert_stdout_eq_str("no solution\n\0");
+    cr_assert_stdout_eq_str("no solution\n");
 }
 
 Test(Basic_test, No_solution_found_iter, .init = redirect_all_stdout)
@@ -28,5 +28,5 @@ Test(Basic_test, No_solution_found_iter, .init = redirect_all_stdout)
     value_t value = {9, -1, 10, -9, 100};
 
     iteration(value.nb, value);
-    cr_assert_stdout_eq_str("no solution\n\0");
+    cr_assert_stdout_eq_str("no solution\n");
 }

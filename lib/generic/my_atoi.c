@@ -14,12 +14,12 @@ int my_atoi(char *str)
     int nb = 0;
 
     if (str == NULL || str[0] == '\0') {
-        write(2, "Error: void string\n\0", 21);
+        write(2, "Error: void string\n", 19);
         exit(84);
     }
     for (size_t i = 0; str[i] != '\0'; i++) {
         if (isdigit(str[i]) == 0) {
-            write(2, "Error: bad option\n\0", 20);
+            write(2, "Error: bad option\n", 19);
             exit(84);
         }
         nb = (nb * 10) + (str[i] - '0');

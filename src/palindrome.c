@@ -7,7 +7,7 @@
 
 #include "palindrome.h"
 
-static void need_free(void *str1, void *str2, void *str3)
+void need_free(void *str1, void *str2, void *str3)
 {
     if (str1)
         free(str1);
@@ -17,7 +17,7 @@ static void need_free(void *str1, void *str2, void *str3)
         free(str3);
 }
 
-static void print_result(int nb, int res, int iteration, int base)
+void print_result(int nb, int res, int iteration, int base)
 {
     my_printf("%d leads to %d in %d iteration(s) in base %d\n" \
     , nb, res, iteration, base);
@@ -38,13 +38,13 @@ void iteration(int nb, value_t value)
         str_two = my_revstr(my_strdup(str));
     }
     if (i < value.imin || my_strcmp(str, str_two) != 0)
-        write(1, "no solution\n\0", 13);
+        write(1, "no solution\n", 12);
     else
         print_result(value.nb, nb, i, value.base);
     need_free(str, str_two, NULL);
 }
 
-static int palindrome_iteration(int nb, value_t value)
+int palindrome_iteration(int nb, value_t value)
 {
     char *str = transform_base(nb, value.base, 0);
     char *str_two = my_revstr(my_strdup(str));
@@ -89,5 +89,5 @@ void palindrome(value_t value)
         check += palindrome_iteration(0, value);
     value.nb = -1;
     if (check == 0)
-        write(1, "no solution\n\0", 13);
+        write(1, "no solution\n", 12);
 }
